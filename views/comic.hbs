@@ -11,3 +11,19 @@
   <p>{{comicBook.review}}</p>
 </div>
 
+<h2>Edit Entry</h2>
+    <form action="/{{comicBook._id}}?_method=put" method="post"><br>
+      <input type="text" name="editComic[title]" placeholder="Title"><br>
+      <input type="text" name="editComic[publisher]" placeholder="Publisher"><br>
+      <input type="number" name="editComic[issue]" placeholder="Issue Number"><br>
+      <input type="text" name="editComic[url]" placeholder="Buy Digital Comic Book"><br>
+      <textarea type="text" name="editComic[review]" placeholder="Write Review Here"></textarea><br>
+      <button type="submit" class="updateButton">Update</button>
+    </form>
+
+  <h3>Delete Entry</h3>
+  <form action="/{{comicBook._id}}?_method=delete" method="post">
+    <button type="submit" class="deleteButton">Delete</button>
+  </form>
+</section>
+
