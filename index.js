@@ -18,6 +18,7 @@ app.engine('.hbs', hbs({
 app.use('/assets', express.static('public'))
 app.use(express.static(__dirname + '/public'))
 app.use(parser.urlencoded({ extended: true }))
+app.use(methodOverride('_method'))
 
 app.use('/', kryptonite)
 

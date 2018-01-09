@@ -3,7 +3,7 @@ const ComicBooks = require('../db/schema')
 
 const router = express.Router()
 
-//display welcome page
+// welcome page
 router.get('/', (req, res) => {
   ComicBooks.find({})
     .then((comics) => {
@@ -13,7 +13,7 @@ router.get('/', (req, res) => {
     })
 })
 
-//selecting comic to look at
+// selecting comic to look at
 router.get('/:comicId', (req, res) => {
   ComicBooks.findOne({_id: req.params.comicId})
     .then((comic) => {
@@ -23,7 +23,7 @@ router.get('/:comicId', (req, res) => {
     })
 })
 
-//Edit Entry
+// Edit Entry
 router.put('/:comicId', (req, res) => {
   ComicBooks.findOneAndUpdate({_id: req.params.comicId},
     req.body.editComic, {
@@ -33,9 +33,20 @@ router.put('/:comicId', (req, res) => {
       })
 })
 
-//Delete Entry
+// Post New Comic
+router.post('/', (req, res) => {
+  ComicBooks.create(req.body.newComicBook)
+  .then(comicBook => {
+    res.redirect('/')
+  })
+  .catch((err) => {
+    console.log(err)
+  })
+})
+
+// Delete Entry
 router.delete('/:comicId', (req, res) => {
-  ComicBooks.findByIdAndRemove({_id: req.params.comicId})
+  ComicBooks.findOneAndRemove({_id: req.params.comicId})
     .then(() => {
       res.redirect('/')
     })
