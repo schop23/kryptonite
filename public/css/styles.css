@@ -16,6 +16,10 @@
   color: black !important;
 }
 
+:-ms-input-placeholder {
+  color: black !important;
+}
+
 .submitButton {
   background-color: lawngreen !important;
   margin-bottom: 30px;
