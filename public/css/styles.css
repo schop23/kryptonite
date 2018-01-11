@@ -9,7 +9,11 @@
 }
 
 ::-webkit-input-placeholder {
-  color: black  !important;
+  color: black !important;
+}
+
+::-moz-placeholder {
+  color: black !important;
 }
 
 .submitButton {
