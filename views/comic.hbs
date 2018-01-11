@@ -1,29 +1,30 @@
-<div class="comic">
-  <h3>Title:</h3>
+<section class="comicPage"> 
+<div class="indigo-text text-darken-4">
+  <h5>Title:</h5>
   <p>{{comicBook.title}}</p>
-  <h3>Publisher:</h3>
+  <h5>Publisher:</h5>
   <p>{{comicBook.publisher}}</p>
-  <h3>Issue:</h3>
+  <h5>Issue:</h5>
   <p>{{comicBook.issue}}</p>
-  <h3>URL to Purchase/Download Comic Book</h3>
+  <h5>URL to Purchase/Download Comic Book</h5>
   <p>{{comicBook.url}}</p>
-  <h3>Review</h3>
+  <h5>Review</h5>
   <p>{{comicBook.review}}</p>
 </div>
 
-<h2>Edit Entry</h2>
+<h4 class="indigo-text text-darken-4">Edit Entry</h4>
     <form action="/{{comicBook._id}}?_method=put" method="post"><br>
       <input type="text" name="editComic[title]" placeholder="Title"><br>
       <input type="text" name="editComic[publisher]" placeholder="Publisher"><br>
       <input type="number" name="editComic[issue]" placeholder="Issue Number"><br>
       <input type="text" name="editComic[url]" placeholder="Buy Digital Comic Book"><br>
       <textarea type="text" name="editComic[review]" placeholder="Write Review Here"></textarea><br>
-      <button type="submit" class="updateButton">Update</button>
+      <button type="submit" class="updateButton submitButton btn waves-effect">Update</button>
     </form>
 
-  <h3>Delete Entry</h3>
+  <h4 class="indigo-text text-darken-4">Delete Entry</h4>
   <form action="/{{comicBook._id}}?_method=delete" method="post">
-    <input type="submit" value="Delete">
+    <button type="submit" class="deleteButton submitButton btn waves-effect">Delete</button>
   </form>
 </section>
 

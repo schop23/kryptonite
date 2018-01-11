@@ -1,0 +1,39 @@
+.header {
+  font-family: 'Permanent Marker', cursive;
+}
+
+.body {
+  background-image: url('DC-Rebirth-Cover.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+::-webkit-input-placeholder {
+  color: black  !important;
+}
+
+.submitButton {
+  background-color: lawngreen !important;
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+
+.updateButton {
+  background-color: lawngreen !important;
+  margin-bottom: 10px;
+  margin-top: 10px; 
+}
+
+.deleteButton {
+  background-color: lawngreen !important;
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+
+.welcome {
+  margin-left: 50px;
+}
+
+.comicPage {
+  margin-left: 50px;
+}

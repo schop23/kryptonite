@@ -1,27 +1,27 @@
-<section>
-  <h3>When you only have time to read 1 or 2 comic books per week, this list, compiled by other comic book enthusiasts, should help you find what should be at the top of your stack!</h3>
-  <h4>The Rules:</h4>
-  <ol>
+  <h4 class="center-align indigo-text text-darken-4">When you only have time to read 1 or 2 comic books per week, this list, compiled by other comic book enthusiasts, should help you find what should be at the top of your stack!</h4>
+  <section class="welcome">
+  <h4 class="indigo-text text-darken-4">The Rules:</h4>
+  <ol class="indigo-text text-darken-4">
     <li>You can only add a comic that was released on the specified release date.</li>
-    <li>The URL you list to the digital comic book must be to a site that is universally recognized for providing digital comic books, such as Amazon and ComiXology.</li>
+    <li>The URL you list to the digital comic book must be to a site that is universally recognized <br> for providing digital comic books, such as Amazon and ComiXology.</li>
     <li>Take this seriously and be kind. This could be helpful to you someday!</li>
   </ol>
-  <h2>January 3, 2018</h2>
+  <h4 class="indigo-text text-darken-4">January 3, 2018</h4>
   {{#each comicBooks as |comicBook index|}}
   <div class="comics">
     <a href="/{{comicBook._id}}">
-      <h2>{{comicBook.title}}</h2>
+      <h5 class="light-green-text text-accent-4">{{comicBook.title}}</h5>
     </a>
   </div>
   {{/each}}
-  <h2>Post a New Comic</h2>
+  <h4 class="indigo-text text-darken-4">Post a New Comic</h4>
   <form action="/" method="post">
     <input type="text" name="newComicBook[title]" placeholder="Comic Book Title"><br>
     <input type="text" name="newComicBook[publisher]" placeholder="Publisher"><br>
     <input type="number" name="newComicBook[issue]" placeholder="Issue Number"><br>
     <input type="text" name="newComicBook[url]" placeholder="Buy Digital Comic Book"><br>
     <textarea type="text" name="newComicBook[review]" placeholder="Write Review Here"></textarea><br>
-    <button type="submit" class="submitButton">Post</button>
+    <button type="submit" class="submitButton btn waves-effect">Post</button>
   </form>
-
+</section>
   
