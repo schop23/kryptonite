@@ -7,7 +7,7 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
-
+/* got the code for changing the placeholder colors from: https://stackoverflow.com/questions/15497550/change-input-placeholder-color-darker/15497614#15497614 */
 ::-webkit-input-placeholder {
   color: black !important;
 }
