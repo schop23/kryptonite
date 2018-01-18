@@ -14,11 +14,19 @@
 
 <h4 class="indigo-text text-darken-4">Edit Entry</h4>
     <form action="/{{comicBook._id}}?_method=put" method="post"><br>
-      <input type="text" name="editComic[title]" placeholder="Title"><br>
-      <input type="text" name="editComic[publisher]" placeholder="Publisher"><br>
-      <input type="number" name="editComic[issue]" placeholder="Issue Number"><br>
-      <input type="text" name="editComic[url]" placeholder="Buy Digital Comic Book"><br>
-      <textarea type="text" name="editComic[review]" placeholder="Write Review Here"></textarea><br>
+      {{!-- you can use the value attribute to auto populate a form with existing data --}}
+      {{!-- this is helpful if you want to update only part of your model without clearing the rest --}}
+      {{!-- you can use label tags to show what each input is used for --}}
+      <label>Title</label>
+      <input type="text" name="editComic[title]" value="{{comicBook.title}}"><br>
+      <label>Publisher</label>
+      <input type="text" name="editComic[publisher]" value="{{comicBook.publisher}}"><br>
+      <label>Issue Number</label>
+      <input type="number" name="editComic[issue]" value="{{comicBook.issue}}"><br>
+      <label>Buy Digital Comic Book</label>
+      <input type="text" name="editComic[url]" value="{{comicBook.url}}"><br>
+      <label>Review</label>
+      <textarea type="text" name="editComic[review]" value="{{comicBook.review}}"></textarea><br>
       <button type="submit" class="updateButton submitButton btn waves-effect">Update</button>
     </form>
 
