@@ -7,9 +7,7 @@ const router = express.Router()
 router.get('/', (req, res) => {
   ComicBooks.find({})
     .then((comics) => {
-      res.render('welcome-page', {
-        comicBooks: comics
-      })
+      res.json(comics)
     })
 })
 
@@ -35,9 +33,11 @@ router.put('/:comicId', (req, res) => {
 
 // Post New Comic
 router.post('/', (req, res) => {
-  ComicBooks.create(req.body.newComicBook)
+  console.log(req.body)
+  ComicBooks
+  .create(req.body)
   .then(comicBook => {
-    res.redirect('/')
+    res.json(comicBook)
   })
   .catch((err) => {
     console.log(err)
